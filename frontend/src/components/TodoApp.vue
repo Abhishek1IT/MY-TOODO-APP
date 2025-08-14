@@ -138,7 +138,7 @@ ul {
 
 li {
   padding: 6px 10px;
-  border: 1px solid #eb7f7fff;
+  border: 1px solid #e6ccccff;
   border-radius: 4px;
   background: white;
   margin-bottom: 10px;
