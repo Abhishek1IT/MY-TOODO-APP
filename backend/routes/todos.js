@@ -23,19 +23,6 @@ router.post("/", async (req, res) => {
 
 router.put("/:id", async (req, res) => {
   try {
-    const updatedTodo = await Todo.findByIdAndUpdate(
-      req.params.id,
-      { title: req.body.title, completed: req.body.completed },
-      { new: true }
-    );
-    res.json(updatedTodo);
-  } catch (err) {
-    res.status(400).json({ error: err.message });
-  }
-});
-
-router.put("/:id", async (req, res) => {
-  try {
     const todo = await Todo.findByIdAndUpdate(
       req.params.id,
       req.body,
