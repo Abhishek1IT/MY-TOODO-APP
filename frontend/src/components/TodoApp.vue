@@ -84,6 +84,7 @@ async toggleTodo(todo) {
 </script>
 
 <style>
+
 * {
   margin: 0;
   padding: 0;
@@ -91,44 +92,74 @@ async toggleTodo(todo) {
 }
 
 body {
-  background-color: #41625dff;
+  background: linear-gradient(135deg, #f9f947ff, #abef35ff);
   padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333333ff;
 }
 
 .todo-app {
-  padding: 10px;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  padding: 20px;
   max-width: 500px;
   margin: auto;
-  font-family: Arial;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.todo-app:hover {
+  transform: scale(1.01);
+}
+
+.todo-app h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2e4741;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
 }
 
 form {
   margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 input[type="text"] {
-  border: 1px solid #f7a5a5ff;
-  border-radius: 4px;
-  padding: 8px;
+  border: 1px solid #d6d6d6;
+  border-radius: 6px;
+  padding: 10px;
   width: 70%;
+  font-size: 14px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border: 1px solid #5c9ead;
+  box-shadow: 0 0 6px rgba(92, 158, 173, 0.4);
+  outline: none;
 }
 
 button {
-  padding: 8px 12px;
-  margin-left: 10px;
-  background-color: #b1d6718d;
+  padding: 10px 16px;
+  background-color: #5c9ead;
   border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:disabled {
-  opacity: 0.5;
+  opacity: 0.6;
   cursor: not-allowed;
 }
 
 button:hover:not(:disabled) {
-  background-color: #96ccf3ff;
+  background-color: #4a8793;
+  transform: scale(1.05);
 }
 
 ul {
@@ -137,22 +168,25 @@ ul {
 }
 
 li {
-  padding: 6px 10px;
-  border: 1px solid #e6ccccff;
-  border-radius: 4px;
-  background: white;
-  margin-bottom: 10px;
+  padding: 10px 14px;
+  border: 1px solid #ececec;
+  border-radius: 8px;
+  background: #fdfdfd;
+  margin-bottom: 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 li:hover {
   background: #f7f7f7;
+  transform: translateX(4px);
 }
 
 .done {
   text-decoration: line-through;
-  color: gray;
+  color: #888;
 }
+
 </style> 
